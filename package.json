@@ -9,6 +9,8 @@
   "author": "volha.ku",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.3"
+    "browser-sync": "^2.26.3",
+    "stylelint": "^9.9.0",
+    "stylelint-config-recommended": "^2.1.0"
   }
 }
