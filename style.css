@@ -1,6 +1,7 @@
 :root {
     --main-bg-color: white;
     --main-color: black;
+    --border-color: red;
 
 }
 
@@ -8,7 +9,7 @@ body {
     /* Display & Box Model */
     margin: 0px;
     padding: 0px;
-    position: relative;
+    /*position: relative;*/
 
     /* Color */
     background-color: var(--main-bg-color);
@@ -16,9 +17,29 @@ body {
 }
 
 .header {
+    position: relative;
     border: var(--main-color) solid 1px;
-    height: 200px;
+    height: auto;
     margin: 24px 1.5%;
+    clear: both;
+    overflow: auto;
+}
+
+.header__logo {
+    position: relative;
+    border: var(--border-color) solid 1px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0px 1.5%;
+}
+
+.header__menu {
+    position: relative;
+    border: var(--border-color) solid 1px;
+    width: 200px;
+    height: 400px;
+    margin: 0px 1.5%;
     clear: both;
 }
 
@@ -36,10 +57,18 @@ body {
     clear: both;
 }
 
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
 @media screen and (min-width: 1281px) {
     .header {
         float: left;
-        height: 400px;
+        /*height: 400px;*/
         width: 20%;
         clear: none;
     }
