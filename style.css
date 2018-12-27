@@ -7,9 +7,8 @@
 
 body {
     /* Display & Box Model */
-    margin: 0px;
-    padding: 0px;
-    /*position: relative;*/
+    margin: 0;
+    padding: 0;
 
     /* Color */
     background-color: var(--main-bg-color);
@@ -17,30 +16,25 @@ body {
 }
 
 .header {
-    position: relative;
     border: var(--main-color) solid 1px;
-    height: auto;
     margin: 24px 1.5%;
-    clear: both;
-    overflow: auto;
 }
 
 .header__logo {
-    position: relative;
     border: var(--border-color) solid 1px;
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    margin: 0px 1.5%;
+    margin-left: auto;
+    margin-right: auto
 }
 
 .header__menu {
-    position: relative;
     border: var(--border-color) solid 1px;
     width: 200px;
     height: 400px;
-    margin: 0px 1.5%;
-    clear: both;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main {
@@ -68,7 +62,6 @@ body {
 @media screen and (min-width: 1281px) {
     .header {
         float: left;
-        /*height: 400px;*/
         width: 20%;
         clear: none;
     }
