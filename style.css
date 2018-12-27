@@ -1,0 +1,65 @@
+:root {
+    --main-bg-color: white;
+    --main-color: black;
+
+}
+
+body {
+    /* Display & Box Model */
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+
+    /* Color */
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+}
+
+.header {
+    border: var(--main-color) solid 1px;
+    height: 200px;
+    margin: 24px 1.5%;
+    clear: both;
+}
+
+.main {
+    border: var(--main-color) solid 1px;
+    height: 600px;
+    margin: 24px 1.5%;
+    clear: both;
+}
+
+.footer {
+    border: var(--main-color) solid 1px;
+    height: 100px;
+    margin: 24px 1.5% 0px 1.5%;
+    clear: both;
+}
+
+@media screen and (min-width: 1281px) {
+    .header {
+        float: left;
+        height: 400px;
+        width: 20%;
+        clear: none;
+    }
+
+    .main {
+        float: right;
+        height: 600px;
+        width: 74%;
+        clear: none;
+    }
+}
+
+@media screen and (max-width: 1281px) and (min-width: 992px) {
+
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
