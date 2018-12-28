@@ -2,9 +2,10 @@
     --main-bg-color: white;
     --main-color: black;
     --border-color: red;
-
 }
-
+html {
+    font-size: 20px;
+}
 body {
     /* Display & Box Model */
     margin: 0;
@@ -25,16 +26,14 @@ body {
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    margin-left: auto;
-    margin-right: auto
-}
-
-.header__menu {
-    border: var(--border-color) solid 1px;
-    width: 200px;
-    height: 400px;
+    line-height: 200px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+}
+
+a.logo {
+    text-decoration: none;
 }
 
 .main {
@@ -80,18 +79,18 @@ body {
     width: 200px;
 }
 
-/*.clearfix:after {
-    content: "";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}*/
-
 @media screen and (min-width: 1281px) {
     .header {
         float: left;
         clear: none;
+    }
+
+    .header__menu {
+        border: var(--border-color) solid 1px;
+        width: 200px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .main {
@@ -99,21 +98,85 @@ body {
         width: 74%;
         clear: none;
     }
+
+    nav ul {
+        width: 50px;
+        padding:0;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    li a {
+        display: block;
+        padding: 8px 0;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #555;
+        color: white;
+    }
+
+    .main__content {
+    }
+
+    .flex-container {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        height: 100%;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    .flex-item {
+        width: 30%;
+        /*height: 30%;*/
+        border: var(--main-color) solid 3px;
+    }
 }
 
 @media screen and (max-width: 1281px) and (min-width: 992px) {
+    .header {
+        overflow: auto;
+    }
+
     .header__logo {
         float: left;
+        display: block;
     }
 
     .header__menu {
-        width: 400px;
-        height: 200px;
-        float: right;
     }
 
-    .header {
+    nav {
+        float: none;
+        overflow: auto;
+        justify-content: center;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
         overflow: hidden;
+    }
+
+    li {
+        margin-left: auto;
+        margin-right: auto;
+        float: left;
+    }
+    li a {
+        display: block;
+        padding: 8px;
+        background-color: #dddddd;
     }
 }
 
