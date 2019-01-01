@@ -9,30 +9,38 @@
     <link rel="stylesheet" href="style.css">
     <title>Stage-2</title>
 </head>
-<body>
+<body class="container">
     <header class="header">
-        <section class="header__logo">
-            <a href="/" class="logo">LOGO</a>
+        <section class="logo header__logo">
+            <a href="#" class="logo_link">LOGO</a>
         </section>
 
-        <nav class="header__menu">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Stuff</a></li>
-                <li><a href="">Pictures</a></li>
-                <li><a href="">About</a></li>
+        <nav class="menu header__menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link menu__link--active">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">Pictures</a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">Stuff</a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">About</a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <article class="main">
         <section class="main__heading">
-
             <div style="font-size: 40px; height: 30%;">Heading</div>
-
             <div style="height: 30%; text-align: center;">Jumbotron</div>
         </section>
+
         <section class="main__subscribe"></section>
+
         <section class="main__content">
             <ul class="flex-container">
                 <li class="flex-item">Hello you</li>

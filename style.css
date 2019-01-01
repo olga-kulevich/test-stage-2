@@ -6,8 +6,12 @@
 html {
     font-size: 20px;
 }
-body {
+.container {
     /* Display & Box Model */
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
     margin: 0;
     padding: 0;
 
@@ -17,22 +21,19 @@ body {
 }
 
 .header {
-    border: var(--main-color) solid 1px;
     margin: 24px 1.5%;
 }
 
 .header__logo {
-    border: var(--border-color) solid 1px;
+    border: var(--main-color) solid 2px;
     border-radius: 50%;
     width: 200px;
     height: 200px;
     line-height: 200px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
 }
 
-a.logo {
+menu__link {
     text-decoration: none;
 }
 
@@ -45,7 +46,7 @@ a.logo {
 
 .main__heading {
     height: 400px;
-    border: var(--border-color) solid 1px;
+    border: var(--main-color) solid 2px;
 }
 
 .main__subscribe {
@@ -59,17 +60,19 @@ a.logo {
 }
 
 .footer {
+    display: flex;
+    width: 100%;
     border: var(--main-color) solid 1px;
     margin: 24px 1.5%;
-    clear: both;
-    overflow: hidden;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .footer__privacy {
     border: var(--border-color) solid 1px;
-    float: left;
     height: 100px;
-    width: 200px;
+    width: 400px;
+    margin-right:auto;
 }
 
 .footer__social {
@@ -77,26 +80,37 @@ a.logo {
     float: right;
     height: 100px;
     width: 200px;
+    margin-left: auto;
 }
+
+/*min-width: 1281px*/
 
 @media screen and (min-width: 1281px) {
     .header {
-        float: left;
-        clear: none;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        width: 20%;
     }
 
     .header__menu {
-        border: var(--border-color) solid 1px;
+        border: var(--main-color) solid 2px;
         width: 200px;
         height: 400px;
         margin-left: auto;
         margin-right: auto;
     }
 
+    .header__logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .main {
-        float: right;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
         width: 74%;
-        clear: none;
     }
 
     nav ul {
@@ -138,45 +152,70 @@ a.logo {
     }
     .flex-item {
         width: 30%;
-        /*height: 30%;*/
         border: var(--main-color) solid 3px;
     }
 }
 
 @media screen and (max-width: 1281px) and (min-width: 992px) {
     .header {
-        overflow: auto;
-    }
-
-    .header__logo {
-        float: left;
-        display: block;
-    }
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        justify-content: space-between;    }
 
     .header__menu {
+        display: flex;
+        width: 75%;
+        justify-content: space-between;
     }
 
-    nav {
-        float: none;
-        overflow: auto;
-        justify-content: center;
-    }
-
-    ul {
-        list-style-type: none;
+    .menu__list {
         padding: 0;
-        overflow: hidden;
+        margin: 0;
+        list-style: none;
+        height: 100%;
+        width: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        flex-flow: row nowrap;
+        justify-content: space-between;
     }
 
-    li {
-        margin-left: auto;
-        margin-right: auto;
-        float: left;
-    }
-    li a {
+    .menu__link {
+        text-decoration: none;
+        width: 100%;
         display: block;
-        padding: 8px;
-        background-color: #dddddd;
+    }
+
+    .main {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .flex-container {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        height: 100%;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    .flex-item {
+        width: 30%;
+        border: var(--main-color) solid 3px;
     }
 }
 
