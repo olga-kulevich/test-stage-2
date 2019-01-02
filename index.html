@@ -5,6 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Stage-2</title>
@@ -12,22 +17,30 @@
 <body class="container">
     <header class="header">
         <section class="logo header__logo">
-            <a href="#" class="logo_link">LOGO</a>
+            <a href="#" class="logo__link">LOGO</a>
         </section>
 
         <nav class="menu header__menu">
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a href="#" class="menu__link menu__link--active">Home</a>
+                    <a href="#" class="menu__link menu__link--active">
+                        <i class="fas fa-home fa-fw"></i>Home
+                    </a>
                 </li>
-                <li>
-                    <a href="#" class="menu__link">Pictures</a>
+                <li class="staff menu__item">
+                    <a href="#" class="menu__link">
+                        <i class="fas fa-layer-group fa-fw"></i>Stuff
+                    </a>
                 </li>
-                <li>
-                    <a href="#" class="menu__link">Stuff</a>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <i class="fas fa-th-large fa-fw"></i>Pictures
+                    </a>
                 </li>
-                <li>
-                    <a href="#" class="menu__link">About</a>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <i class="fas fa-home fa-fw"></i>About
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -35,11 +48,21 @@
 
     <article class="main">
         <section class="main__heading">
-            <div style="font-size: 40px; height: 30%;">Heading</div>
-            <div style="height: 30%; text-align: center;">Jumbotron</div>
+            <div style="font-size: 40px;">Heading</div>
+            <div style="text-align:center;"><p>Jumbotron</p></div>
         </section>
 
-        <section class="main__subscribe"></section>
+        <section class="main__subscribe">
+            <form>
+                <fieldset class="fieldset">
+                    <ul class="subscribe__list">
+                        <li><label class="subscribe__item" for="email">Sign up for our newsletter:</label></li>
+                        <li><input class="subscribe__item" type="email" id="email" placeholder="Email Address"></li>
+                        <li><button style="margin-left: 5px;"class="subscribe__item" type="submit">Subscribe</button></li>
+                    </ul>
+                </fieldset>
+            </form>
+        </section>
 
         <section class="main__content">
             <ul class="flex-container">
@@ -51,8 +74,29 @@
     </article>
 
     <footer class="footer">
-        <section class="footer__privacy"></section>
-        <section class="footer__social"></section>
+        <section class="privacy footer__privacy">
+            <ul class="privacy__list">
+                <li><a href="#" class="privacy__item">Privacy Policy</a></li>
+                <li class="divider">|</li>
+                <li><a href="#" class="privacy__item">Terms of use</a></li>
+                <li class="divider">|</li>
+                <li><a href="#" class="privacy__item">Contact</a></li>
+            </ul>
+            <div class="privacy__copy">&copy 2015 My Company, all rights reserved.</div>
+        </section>
+        <section class="social footer__social">
+            <ul class="social__list">
+                <li class="social__item">
+                    <i class="fab fa-facebook-square fa-2x"></i>
+                </li>
+                <li class="social__item">
+                    <img src="google.png">
+                </li>
+                <li class="social__item">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </li>
+            </ul>
+        </section>
     </footer>
 
 </body>
