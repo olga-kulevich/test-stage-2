@@ -24,22 +24,25 @@
             <ul class="menu__list">
                 <li class="menu__item">
                     <a href="#" class="menu__link menu__link--active">
-                        <i class="fas fa-home fa-fw"></i>Home
+                        <span class="fas fa-home fa-fw"></span>Home
                     </a>
                 </li>
-                <li class="staff menu__item">
-                    <a href="#" class="menu__link">
-                        <i class="fas fa-layer-group fa-fw"></i>Stuff
-                    </a>
-                </li>
+                <li class="divider">|</li>
                 <li class="menu__item">
                     <a href="#" class="menu__link">
-                        <i class="fas fa-th-large fa-fw"></i>Pictures
+                        <span class="fas fa-layer-group fa-fw"></span>Pictures
                     </a>
                 </li>
+                <li class="divider">|</li>
                 <li class="menu__item">
                     <a href="#" class="menu__link">
-                        <i class="fas fa-home fa-fw"></i>About
+                        <span class="fas fa-th-large fa-fw"></span>Stuff
+                    </a>
+                </li>
+                <li class="divider">|</li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <span class="fas fa-info-circle fa-fw"></span>About
                     </a>
                 </li>
             </ul>
@@ -56,9 +59,9 @@
             <form>
                 <fieldset class="fieldset">
                     <ul class="subscribe__list">
-                        <li><label class="subscribe__item" for="email">Sign up for our newsletter:</label></li>
-                        <li><input class="subscribe__item" type="email" id="email" placeholder="Email Address"></li>
-                        <li><button style="margin-left: 5px;"class="subscribe__item" type="submit">Subscribe</button></li>
+                        <li class="subscribe__list_li"><label class="subscribe__item" for="email">Sign up for our newsletter:</label></li>
+                        <li class="subscribe__list_li"><input class="subscribe__item" type="email" id="email" placeholder="Email Address"></li>
+                        <li class="subscribe__list_li"><button class="subscribe__item" style="margin-left: 5px;" type="submit">Subscribe</button></li>
                     </ul>
                 </fieldset>
             </form>
@@ -66,7 +69,12 @@
 
         <section class="main__content">
             <ul class="flex-container">
-                <li class="flex-item">Hello you</li>
+                <li class="flex-item">Hello you<br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
                 <li class="flex-item">Some info</li>
                 <li class="flex-item">Whats new</li>
             </ul>

@@ -34,12 +34,23 @@ html {
     text-align: center;
 }
 
+.menu__list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
 .logo__link {
     text-decoration: none;
 }
 
 .menu__link {
     text-decoration: none;
+    width: 100%;
+    display: block;
 }
 
 .main {
@@ -66,17 +77,6 @@ html {
     height: 30%;
     width: 100%;
     line-height: 100px;
-}
-
-.main__subscribe {
-    /*display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    line-height: 100px;*/
 }
 
 fieldset {
@@ -121,6 +121,27 @@ input {
     height: 300px;
 }
 
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.flex-item {
+    width: 30%;
+    border: var(--main-color) solid 2px;
+}
+
 .footer {
     display: flex;
     width: 100%;
@@ -144,6 +165,10 @@ input {
 
 .fa, .fab, .fal, .far, .fas {
     display: inline;
+}
+
+.divider {
+    font-weight: bold;
 }
 
 .footer__social {
@@ -206,7 +231,7 @@ input {
     display: block;
 }
 
-privacy__copy {
+.privacy__copy {
     width: 100%;
 }
 
@@ -232,30 +257,25 @@ privacy__copy {
 
     .menu__list {
         width: 50%;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
-        padding:0;
         margin-left: auto;
         margin-right: auto;
         padding-top: 2em;
     }
 
-    .menu__item {
-    }
-    .staff {
-        order: 2;
+    .divider {
+        display: none;
     }
 
     .menu__link {
-        text-decoration: none;
-        width: 100%;
-        display: block;
         padding: 1em 0;
+    }
+
+    .menu__item:nth-of-type(5) {
+        order: -1;
+    }
+    .menu__item:nth-of-type(1) {
+        order: -3;
     }
 
     .header__logo {
@@ -269,29 +289,6 @@ privacy__copy {
         justify-content: space-between;
         width: 82%;
     }
-
-    .main__content {
-    }
-
-    .flex-container {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        height: 100%;
-
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-
-        flex-flow: row nowrap;
-        justify-content: space-between;
-    }
-    .flex-item {
-        width: 30%;
-        border: var(--main-color) solid 3px;
-    }
 }
 
 @media screen and (max-width: 1281px) and (min-width: 992px) {
@@ -299,7 +296,8 @@ privacy__copy {
         display: flex;
         flex-flow: row nowrap;
         width: 100%;
-        justify-content: space-between;    }
+        justify-content: space-between;
+    }
 
     .header__menu {
         display: flex;
@@ -313,20 +311,13 @@ privacy__copy {
         list-style: none;
         height: 100%;
         width: 100%;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
         align-items: center;
         flex-flow: row nowrap;
-        justify-content: space-between;
     }
 
-    .menu__link {
-        text-decoration: none;
-        width: 100%;
-        display: block;
+    .divider {
+        font-weight: bold;
+        display: none;
     }
 
     .main {
@@ -358,29 +349,125 @@ privacy__copy {
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
-    .header__logo {
-        float: left;
-    }
-
-    .header__menu {
-        float: left;
-        width: 300px;
-        height: 200px;
-    }
-
-    .header {
-        overflow: hidden;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .header__menu {
-        width: 300px;
-        height: 200px;
-    }
-
     .header {
         display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+    }
+
+    .header__menu {
+        display: flex;
+        width: 25%;
+        margin-left: 2em;
+    }
+
+    .menu__list {
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        flex-flow: row nowrap;
+    }
+    .menu__item{
+        text-decoration: underline;
+        padding: 0 5px;
+    }
+
+    .menu__link .fas {
+        display: none;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .subscribe__list {
+        justify-content: flex-start;
+        padding-left: 0px;
+    }
+
+    .subscribe__list_li:nth-child(2) {
+        flex: 1 1 40%;
+    }
+
+    .subscribe__item {
+        width: 100%;
+        margin-left: 0;
+}
+
+    .flex-container {
+    flex-flow: row wrap;
+    }
+
+    .flex-item {
+    margin-top: 20px;
+    width: 49%;
+    border: var(--main-color) solid 2px;
+    }
+
+    .flex-item:nth-of-type(1) {
+    order: 3;
+    }
+    }
+
+@media screen and (max-width: 768px) {
+    .header {
+        width: 100%;
+        display: flex;
         flex-direction: column-reverse;
+    }
+
+    .header__logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header__menu {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+    }
+
+    .menu__link .fas {
+        display: none;
+    }
+
+    .main {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .subscribe__list {
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+
+    .subscribe__list_li:nth-child(1) {
+        flex: 1 1 100%;
+    }
+
+    .subscribe__list_li:nth-child(2) {
+        flex: 1 1 50%;
+    }
+
+    .subscribe__item {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .flex-container {
+        flex-flow: row wrap;
+    }
+
+    .flex-item {
+        margin-top: 20px;
+        width: 100%;
+        border: var(--main-color) solid 2px;
+    }
+
+    .flex-item:nth-of-type(1) {
+        order: 3;
     }
 }
