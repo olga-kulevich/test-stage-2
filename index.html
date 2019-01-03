@@ -14,96 +14,121 @@
     <link rel="stylesheet" href="style.css">
     <title>Stage-2</title>
 </head>
-<body class="container">
-    <header class="header">
-        <section class="logo header__logo">
-            <a href="#" class="logo__link">LOGO</a>
+<body>
+    <header class="header display-flex">
+
+        <section class="logo">
+            <a class="logo-link logo-link_text-uppercase logo-link_text-decoration"href="#">logo</a>
         </section>
 
-        <nav class="menu header__menu">
-            <ul class="menu__list">
-                <li class="menu__item">
-                    <a href="#" class="menu__link menu__link--active">
-                        <span class="fas fa-home fa-fw"></span>Home
+        <nav class="header-menu">
+            <ul class="header-menu__list display-flex">
+                <li class="header-menu__item">
+                    <a href="#" class="header-menu__link header-menu__link_active">
+                        <span class="fas fa-home fa-fw icon"></span>Home
                     </a>
                 </li>
                 <li class="divider">|</li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">
-                        <span class="fas fa-layer-group fa-fw"></span>Pictures
+                <li class="header-menu__item">
+                    <a class="header-menu__link" href="#">
+                        <span class="fas fa-th-large fa-fw icon"></span>Pictures
                     </a>
                 </li>
                 <li class="divider">|</li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">
-                        <span class="fas fa-th-large fa-fw"></span>Stuff
+                <li class="header-menu__item">
+                    <a class="header-menu__link" href="#">
+                        <span class="fas fa-layer-group fa-fw icon"></span>Stuff
                     </a>
                 </li>
                 <li class="divider">|</li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">
-                        <span class="fas fa-info-circle fa-fw"></span>About
+                <li class="header-menu__item">
+                    <a class="header-menu__link" href="#">
+                        <span class="fas fa-info-circle fa-fw icon"></span>About
                     </a>
                 </li>
             </ul>
         </nav>
+
     </header>
 
-    <article class="main">
-        <section class="main__heading">
-            <div style="font-size: 40px;">Heading</div>
-            <div style="text-align:center;"><p>Jumbotron</p></div>
+    <section class="main">
+
+        <section class="banner display-flex">
+            <div class="banner__heading"><h1>Heading</h1></div>
+            <div class="banner__jumbotron"><p>Jumbotron</p></div>
         </section>
 
-        <section class="main__subscribe">
+        <section class="subscription">
             <form>
                 <fieldset class="fieldset">
-                    <ul class="subscribe__list">
-                        <li class="subscribe__list_li"><label class="subscribe__item" for="email">Sign up for our newsletter:</label></li>
-                        <li class="subscribe__list_li"><input class="subscribe__item" type="email" id="email" placeholder="Email Address"></li>
-                        <li class="subscribe__list_li"><button class="subscribe__item" style="margin-left: 5px;" type="submit">Subscribe</button></li>
+                    <ul class="subscription__list display-flex">
+                        <li class="subscription__list_li">
+                            <label class="subscription__item" for="email">Sign up for our newsletter:</label>
+                        </li>
+                        <li class="subscription__list_li">
+                            <input class="subscription__item input" type="email" id="email" placeholder="Email Address">
+                        </li>
+                        <li class="subscription__list_li">
+                            <button class="subscription__item button"  type="submit">Subscribe</button>
+                        </li>
                     </ul>
                 </fieldset>
             </form>
         </section>
 
-        <section class="main__content">
-            <ul class="flex-container">
-                <li class="flex-item">Hello you<br><br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        <section class="main__content content-list display-flex">
+            <article class="content-list__item">
+                <h1>Hello you</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                     ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-                <li class="flex-item">Some info</li>
-                <li class="flex-item">Whats new</li>
-            </ul>
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </article>
+            <article class="content-list__item">
+                <h1>Some info</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </article>
+            <article class="content-list__item">
+                <h1>Whats new</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </article>
         </section>
-    </article>
+    </section>
 
-    <footer class="footer">
-        <section class="privacy footer__privacy">
-            <ul class="privacy__list">
-                <li><a href="#" class="privacy__item">Privacy Policy</a></li>
-                <li class="divider">|</li>
-                <li><a href="#" class="privacy__item">Terms of use</a></li>
-                <li class="divider">|</li>
-                <li><a href="#" class="privacy__item">Contact</a></li>
-            </ul>
-            <div class="privacy__copy">&copy 2015 My Company, all rights reserved.</div>
+    <footer class="footer display-flex">
+        <section class="footer-info display-flex">
+            <nav class="footer-menu">
+                <ul class="footer-menu__list display-flex">
+                    <li><a href="#" class="footer-menu-item">Privacy Policy</a></li>
+                    <li class="divider">|</li>
+                    <li><a href="#" class="footer-menu-item">Terms of use</a></li>
+                    <li class="divider">|</li>
+                    <li><a href="#" class="footer-menu-item">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="copyright">&copy 2015 My Company, all rights reserved.</div>
         </section>
         <section class="social footer__social">
-            <ul class="social__list">
-                <li class="social__item">
+            <div class="social__list display-flex">
+                <div class="social__item">
                     <i class="fab fa-facebook-square fa-2x"></i>
-                </li>
-                <li class="social__item">
+                </div>
+                <div class="social__item">
                     <img src="google.png">
-                </li>
-                <li class="social__item">
+                </div>
+                <div class="social__item">
                     <i class="fab fa-twitter fa-2x"></i>
-                </li>
-            </ul>
+                </div>
+            </div>
         </section>
     </footer>
 
