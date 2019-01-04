@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,14 +13,13 @@
     <title>Stage-2</title>
 </head>
 <body>
-    <header class="header display-flex">
-
+    <header class="header">
         <section class="logo">
-            <a class="logo-link logo-link_text-uppercase logo-link_text-decoration"href="#">logo</a>
+            <a class="logo-link logo-link_text--uppercase logo-link_text--decoration" href="#">logo</a>
         </section>
 
         <nav class="header-menu">
-            <ul class="header-menu__list display-flex">
+            <ul class="header-menu__list">
                 <li class="header-menu__item">
                     <a href="#" class="header-menu__link header-menu__link--active">
                         <span class="fas fa-home fa-fw icon"></span>Home
@@ -30,54 +27,40 @@
                 </li>
                 <li class="divider">|</li>
                 <li class="header-menu__item">
-                    <a class="header-menu__link" href="#">
+                    <a class="header-menu__link header-menu__link--active" href="#">
                         <span class="fas fa-th-large fa-fw icon"></span>Pictures
                     </a>
                 </li>
                 <li class="divider">|</li>
                 <li class="header-menu__item">
-                    <a class="header-menu__link" href="#">
+                    <a class="header-menu__link header-menu__link--active" href="#">
                         <span class="fas fa-layer-group fa-fw icon"></span>Stuff
                     </a>
                 </li>
                 <li class="divider">|</li>
-                <li class="header-menu__item">
+                <li class="header-menu__item header-menu__link--active">
                     <a class="header-menu__link" href="#">
                         <span class="fas fa-info-circle fa-fw icon"></span>About
                     </a>
                 </li>
             </ul>
         </nav>
-
     </header>
 
     <section class="main">
-
-        <section class="banner display-flex">
+        <section class="banner" role="banner">
             <div class="banner__heading"><h1>Heading</h1></div>
             <div class="banner__jumbotron"><p>Jumbotron</p></div>
         </section>
 
-        <section class="subscription">
-            <form>
-                <fieldset class="fieldset">
-                    <ul class="subscription__list display-flex">
-                        <li class="subscription__list_li">
-                            <label class="subscription__item" for="email">Sign up for our newsletter:</label>
-                        </li>
-                        <li class="subscription__list_li">
-                            <input class="subscription__item input" type="email" id="email" placeholder="Email Address">
-                        </li>
-                        <li class="subscription__list_li">
-                            <button class="subscription__item button"  type="submit">Subscribe</button>
-                        </li>
-                    </ul>
-                </fieldset>
-            </form>
-        </section>
+        <form class="subscription__form" role="form">
+            <label class="subscription__item" for="email">Sign up for our newsletter:</label>
+            <input class="subscription__item input" type="email" id="email" placeholder="Email Address" autofocus>
+            <button class="subscription__item button" type="submit">Subscribe</button>
+        </form>
 
-        <section class="main__content content-list display-flex">
-            <article class="content-list__item">
+        <div class="main-content" role="main">
+            <article class="content-item">
                 <h2>Hello you</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -85,7 +68,7 @@
                     ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                     in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </article>
-            <article class="content-list__item">
+            <article class="content-item">
                 <h2>Some info</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -93,7 +76,7 @@
                     ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                     in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </article>
-            <article class="content-list__item">
+            <article class="content-item">
                 <h2>Whats new</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -101,33 +84,27 @@
                     ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                     in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </article>
-        </section>
+        </div>
     </section>
 
-    <footer class="footer display-flex">
-        <section class="footer-info display-flex">
+    <footer class="footer">
+        <section class="footer-info">
             <nav class="footer-menu">
-                <ul class="footer-menu__list display-flex">
-                    <li><a href="#" class="footer-menu-item">Privacy Policy</a></li>
+                <ul class="footer-menu__list">
+                    <li><a href="#" class="footer-menu__item">Privacy Policy</a></li>
                     <li class="divider">|</li>
-                    <li><a href="#" class="footer-menu-item">Terms of use</a></li>
+                    <li><a href="#" class="footer-menu__item">Terms of use</a></li>
                     <li class="divider">|</li>
-                    <li><a href="#" class="footer-menu-item">Contact</a></li>
+                    <li><a href="#" class="footer-menu__item">Contact</a></li>
                 </ul>
             </nav>
             <div class="copyright">&copy 2015 My Company, all rights reserved.</div>
         </section>
         <section class="social footer__social">
-            <div class="social__list display-flex">
-                <div class="social__item">
-                    <i class="fab fa-facebook-square fa-2x"></i>
-                </div>
-                <div class="social__item">
-                    <img src="google.png">
-                </div>
-                <div class="social__item">
-                    <i class="fab fa-twitter fa-2x"></i>
-                </div>
+            <div class="social__list">
+                    <a href="#" class="fab fa-facebook-square fa-2x social__item"></a>
+                    <a href="#" class="fab fa-google fa-2x social__item"></a>
+                    <a href="#" class="fab fa-twitter fa-2x social__item"></a>
             </div>
         </section>
     </footer>
